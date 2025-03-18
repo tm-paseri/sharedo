@@ -13,7 +13,10 @@
         <!-- タスク追加フォーム -->
         <div class="task-form">
             <input type="text" id="taskInput" placeholder="新しいタスクを入力">
-            <input type="text" id="tagInput" placeholder="タグを入力（カンマ区切り）">
+            <input type="text" id="tagInput" placeholder="タグを入力（カンマ区切り）" list="tagSuggestions">
+            <datalist id="tagSuggestions">
+                <!-- タグの候補がJavaScriptで動的に追加されます -->
+            </datalist>
             <button onclick="addTask()">追加</button>
         </div>
 

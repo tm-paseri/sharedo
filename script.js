@@ -6,6 +6,7 @@ let tags = new Set();
 document.addEventListener('DOMContentLoaded', () => {
     renderTasks();
     updateTagFilter();
+    updateTagSuggestions();
 });
 
 // タスクの追加
@@ -34,12 +35,14 @@ function addTask() {
     
     renderTasks();
     updateTagFilter();
+    updateTagSuggestions();
 }
 
 // タスクの保存
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
     updateTagFilter();
+    updateTagSuggestions();
 }
 
 // タグフィルターの更新
@@ -62,6 +65,18 @@ function updateTagFilter() {
             option.selected = true;
         }
         tagFilter.appendChild(option);
+    });
+}
+
+// タグの補完候補を更新
+function updateTagSuggestions() {
+    const tagSuggestions = document.getElementById('tagSuggestions');
+    tagSuggestions.innerHTML = '';
+    
+    Array.from(tags).sort().forEach(tag => {
+        const option = document.createElement('option');
+        option.value = tag;
+        tagSuggestions.appendChild(option);
     });
 }
 
@@ -123,3 +138,30 @@ function updateComment(id, comment) {
 function filterTasks() {
     renderTasks();
 }
+
+// タグ入力のイベントリスナー
+document.getElementById('tagInput').addEventListener('input', function(e) {
+    const currentValue = e.target.value;
+    const lastTag = currentValue.split(',').pop().trim();
+    
+    // タグ候補の更新
+    if (lastTag) {
+        const matchingTags = Array.from(tags).filter(tag => 
+            tag.toLowerCase().startsWith(lastTag.toLowerCase())
+        );
+        
+        const tagSuggestions = document.getElementById('tagSuggestions');
+        tagSuggestions.innerHTML = '';
+        
+        matchingTags.forEach(tag => {
+            const option = document.createElement('option');
+            option.value = currentValue.split(',')
+                .slice(0, -1)
+                .concat([tag])
+                .map(t => t.trim())
+                .filter(t => t)
+                .join(', ');
+            tagSuggestions.appendChild(option);
+        });
+    }
+});
