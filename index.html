@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプルタスク管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>シンプルタスク管理</h1>
+        
+        <!-- タスク追加フォーム -->
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="新しいタスクを入力">
+            <input type="text" id="tagInput" placeholder="タグを入力（カンマ区切り）">
+            <button onclick="addTask()">追加</button>
+        </div>
+
+        <!-- タグフィルター -->
+        <div class="tag-filter">
+            <select id="tagFilter" onchange="filterTasks()">
+                <option value="">全てのタグ</option>
+            </select>
+        </div>
+
+        <!-- タスクリスト -->
+        <div class="task-list" id="taskList">
+            <!-- タスクがJavaScriptで動的に追加されます -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
