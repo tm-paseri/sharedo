@@ -47,7 +47,7 @@ RooCodeが提示してきたフォーマットで作成すればAI側も理解�
 
 出力(長いので最初の少しのみ)
 
-
+![image5](./img/2025-03-18-roo-code-introduction/5.png)
 
 ```
 1. 概要
