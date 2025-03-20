@@ -1,19 +1,16 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+rust:
+  label: rust
+  permalink: /rust
+  description: Rust programming language related posts
+programming:
+  label: programming
+  permalink: /programming
+  description: Programming related topics and tutorials
+tutorial:
+  label: tutorial
+  permalink: /tutorial
+  description: Step-by-step guides and tutorials
+ai-editor:
+  label: ai-editor
+  permalink: /ai-editor
+  description: AI-powered code editors and IDEs
