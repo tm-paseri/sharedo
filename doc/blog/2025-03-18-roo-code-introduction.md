@@ -132,9 +132,9 @@ TODO
 
 まずは最低限のアプリを作ってもらうため以下の仕様書を作成していきます
 
-- 2. 目的
-- 3. 対象ユーザー
-- 4. 機能要件
+- 2. 目的(chapter2_objectives.md)
+- 3. 対象ユーザー(chapter3_target_users.md)
+- 4. 機能要件(chapter4_function_requirements.md)
 
 ```markdown
 # 2. 目的
@@ -168,5 +168,46 @@ TODO
 
 
 ## RooCodeにアプリを作成してもらう
+
+早速仕様書の内容でRooCodeにアプリを作成してもらいます。
+
+プロンプト
+```
+doc/docs以下の内容でアプリケーションを作成してください
+本分にTODOと記載されたMarkdownファイルは無視してください
+```
+
+指示内容を認識できていそうです! RooCodeがどのように仕様書を読み取るか確認していきましょう
+![image6](./img/2025-03-18-roo-code-introduction/6.png)
+
+まず, 概要の内容から読み取っているファイルが仕様書であることを認識できています
+
+はじめに読み込ませているドキュメントがどのような目的で作られているかは明示したほうがいいかもしれません
+![image7](./img/2025-03-18-roo-code-introduction/7.png)
+
+開発するアプリの内容と
+![image8](./img/2025-03-18-roo-code-introduction/8.png)
+
+対象のユーザーも理解できています。要約もしてくれました
+![image9](./img/2025-03-18-roo-code-introduction/9.png)
+
+機能要件の理解もOKです
+![image10](./img/2025-03-18-roo-code-introduction/10.png)
+
+これ以降のファイルはすべてTODOとしています
+
+初めてにプロンプトで指示した通りTODOとなっているファイルは無視してくれています
+![image11](./img/2025-03-18-roo-code-introduction/11.png)
+
+作成するアプリの内容を理解したうえで開発方針を示してくれました
+モックを作っている段階なので HTML + Javascript + CSS の一番シンプルな形で問題ないでしょう
+動作確認をするのも簡単なので下手にフレームワークを提示されるよりは良いかもしれません
+![image12](./img/2025-03-18-roo-code-introduction/12.png)
+
+html, css, そしてjavascriptを順々に作成してくれています
+![image13](./img/2025-03-18-roo-code-introduction/13.png)
+
+無事完成です! 動作確認方法も教えてくれています
+![image14](./img/2025-03-18-roo-code-introduction/14.png)
 
 ## まとめ
