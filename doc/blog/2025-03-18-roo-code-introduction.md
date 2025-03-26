@@ -39,6 +39,22 @@ RooCodeには以下のような特徴があります：
 - 変更内容の説明と確認を対話形式で実施
 - エラーや問題点の詳細な解説と修正提案
 
+## はじめてのRooCode
+
+この手の王道、TODOアプリを作っていきます。
+
+まずはRooCodeに最低限のモックアプリケーションを作成してもらいます。
+
+## 完成したモックアプリケーション
+
+タグをつきで登録することができるTODOアプリを作りました
+
+![mock2](./img/2025-03-18-roo-code-introduction/mock2.gif)
+
+以下のURLから利用できます
+
+https://sharedo-tm-paseri.netlify.app/mock/secondmock/
+
 ## RooCodeのセットアップ
 
 今回は簡単にAIコーディングを体験することが目標のため、GitHub Copilotの無料プランを利用することにしました。
@@ -49,12 +65,6 @@ RooCodeの設定は非常にシンプルで、以下の2点を指定するだけ
 - Language Model: copilot - claude-3.5-sonnet（高性能な言語モデル）
 
 ![image1](./img/2025-03-18-roo-code-introduction/1.png)
-
-## はじめてのRooCode
-
-この手の王道、TODOアプリを作っていきます。
-
-まずはRooCodeに最低限のモックアプリケーションを作成してもらいます。
 
 ## 仕様書の雛形を作成する
 
